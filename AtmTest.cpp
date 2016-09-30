@@ -12,33 +12,64 @@ in the account, dispenses the money to the customer, and debits the
 account by the amount withdrawn and the service charges, if any.*/
 
 #include <iostream>
-int main()
 
+int main()
 {
 
 	long double total = 500;
+
 	long double withdrawl = 0;
+
+	double  charge = .04;
 	
-		while (total > 0) {
-		std::cout << "Please enter an amount to withdraw from your balance of  : $" << total << std::endl;
+	
+	
+
+	while (total > 0) {
+
+		std::cout << "Please enter an amount to withdraw from your balance of  :$ "<< total << std::endl;
+
 		std::cin >> withdrawl;
+
+
 
 		if (withdrawl > total)
 		{
-		std::cout << "not enough money you only have :$" << total << std::endl;
+
+			std::cout << " Not enough money";
 		}
-		
-		
-		else 
+
+		else if (withdrawl > 300) {
+			long double subtotal =(withdrawl + (withdrawl*charge));
+						
+			total -= subtotal;
+
+			std::cout << "There was a service charge of 4% and now you have : $" << total << "  left. " << std::endl;
+		}
+
+
+
+
+
+		else if (withdrawl < 300)
 		{
 			std::cout << "You withdrew:  " << withdrawl << std::endl;
 			total -= withdrawl;
+
 			std::cout << "and you have : $" << total << "  left. \n";
 		}
+
+
+
+
+
 	}
 
+	system("pause>nul");
 
 	return 0;
+
+
 }
 
 
