@@ -21,13 +21,14 @@ int main()
 	std::cout << ("How many pages would you like to fax? :");
 	std::cin >> pages;
 
-	total = pages * initial * final + service;
+	
 	if (pages > 10)
+	
 	
 	std::cout << " Your total is :" << total;
 	
 	else if ( pages < 10 )
-	
+	total = pages * initial + service;
 			std::cout << "Your total is :"<< total<< std::endl;
 
 	
