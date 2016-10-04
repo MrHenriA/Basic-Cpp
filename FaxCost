@@ -1,0 +1,47 @@
+/*Suppose that the cost of sending an international fax is calculated as follows:
+The service charge is $3.00, $.20 per page for the first 10 pages, and $0.10 for
+each additional page. Design an algorithm that asks the user to enter the
+number of pages to be faxed. The algorithm then uses the number of pages
+to be faxed to calculate the amount due..*/
+
+#include <iostream>
+
+int main()
+{
+
+	double final= .10;
+
+	double initial = .20;
+
+	double service = 3.00;
+	long double total = 0;
+	int pages = 0;
+	
+	
+	std::cout << ("How many pages would you like to fax? :");
+	std::cin >> pages;
+
+	total = pages * initial * final + service;
+	if (pages > 10)
+	
+	std::cout << " Your total is :" << total;
+	
+	else if ( pages < 10 )
+	
+			std::cout << "Your total is :"<< total<< std::endl;
+
+	
+	
+	
+
+	system("pause>nul");
+
+	return 0;
+
+
+}
+
+
+
+
+
