@@ -1,0 +1,38 @@
+#include <IOSTREAM>
+#include <cstdlib>
+#include <ctime>
+
+int main()
+{
+	srand(static_cast <unsigned int> (time(0))); // seed random number generator
+	int secretnumber = rand() % 100 + 1; // get a number between 1 and 50
+	int tries = 0;
+	int guess;
+
+	std::cout << "\tWelcome to Guess my Number\n\n";
+
+	do
+	{
+		std::cout << "Enter a guess: ";
+		std::cin >> guess;
+		++tries;
+
+		if (guess > secretnumber)
+		{
+			std::cout << "Too high!!\n";
+		}
+		else if (guess < secretnumber)
+		{
+			std::cout << "Too low!!\n";
+		}
+
+		else
+		{
+			std::cout << "Perfect!! You got it in " << tries << " guesses!";
+		}
+	} while (guess != secretnumber);
+
+	system("pause>nul");
+
+	return 0;
+}
