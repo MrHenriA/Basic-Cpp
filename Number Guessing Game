@@ -5,7 +5,7 @@
 int main()
 {
 	srand(static_cast <unsigned int> (time(0))); // seed random number generator
-	int secretnumber = rand() % 100 + 1; // get a number between 1 and 50
+	int secretnumber = rand() % 100 + 1; // get a number between 1 and 100
 	int tries = 0;
 	int guess;
 
